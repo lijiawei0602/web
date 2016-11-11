@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片墙</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="图片墙.css">
+</head>
+<body>
+	<div class="main">
+		<div class="box1">
+			<div class="photo front">
+				<div class="photo-doRotate" onclick="clickRotate3d()">
+					<div class="side front">
+						<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/33.jpg">
+					</div>
+					<div class="side back">
+						男士上衣只要998
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box2">
+			<div class="photo front">
+				<div class="photo-doRotate" onclick="clickRotate3d()">
+					<div class="side front">
+						<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/34.jpg">
+					</div>
+					<div class="side back">
+						男士上衣只要998
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box3">
+			<div class="photo front">
+				<div class="photo-doRotate" onclick="clickRotate3d()">
+					<div class="side front">
+						<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/35.jpg">
+					</div>
+					<div class="side back">
+						男士上衣只要998
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box4">
+			<div class="photo front">
+				<div class="photo-doRotate" onclick="clickRotate3d()">
+					<div class="side front">
+						<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/36.jpg">
+					</div>
+					<div class="side back">
+						男士上衣只要998
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box5">
+			<div class="photo front">
+				<div class="photo-doRotate" onclick="clickRotate3d()">
+					<div class="side front">
+						<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/37.jpg">
+					</div>
+					<div class="side back">
+						男士上衣只要998
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box6">
+			<div class="photo front">
+				<div class="photo-doRotate" onclick="clickRotate3d()">
+					<div class="side front">
+						<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/38.jpg">
+					</div>
+					<div class="side back">
+						男士上衣只要998
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box7">
+			<div class="photo front">
+				<div class="photo-doRotate" onclick="clickRotate3d()">
+					<div class="side front">
+						<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/40.jpg">
+					</div>
+					<div class="side back">
+						男士上衣只要998
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+function  clickRotate3d() {
+	var newClassName;
+	var centerPhoto = document.getElementsByClassName('photo')[0];
+	if(centerPhoto.className.search(/back/) != -1){
+		newClassName = centerPhoto.className.replace(/back/,"front");
+		centerPhoto.setAttribute('class',newClassName); 
+	}
+	else{
+		newClassName = centerPhoto.className.replace(/front/,"back");
+		centerPhoto.setAttribute('class',newClassName);
+	}
+}
+</script>
+</html>

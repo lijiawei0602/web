@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>下拉列表</title>
+    <meta charset="UTF-8">
+</head>
+
+<!-- 页面加载时就实现省信息的添加 -->
+<body onload="load()">	
+    <div>
+        <select class='prov' id='prov' onchange="changeUni()">
+            <!-- <option value=''>--请选择省--</option> -->
+        </select>
+        <select class='university' id='university'>
+            <option value=''>--请选择学校--</option>
+        </select>
+    </div>
+    <script type="text/javascript">
+
+			var province=document.getElementById("prov");
+	        var university=document.getElementById("university");
+	        var arr_prov=new Array(new Option("--请选择省--",''),new Option("山西",""),new Option("陕西",""));
+	        var arr_uni=new Array();
+
+	        arr_uni[0]=new Array(new Option("--请选择学校--",''));
+	        arr_uni[1]=new Array(new Option("山西大学",''),new Option("太原理工大学",''));
+	        arr_uni[2]=new Array(new Option("西安交通大学",''),new Option("西安邮电大学",''));
+	       
+	        //动态载入所有省份
+	        function load(){
+	            for(var i=0;i<arr_prov.length;i++){
+	                province.options[i] = arr_prov[i];
+	            }
+	        }
+
+	        //选中省份之后，根据索引动态载入相应大学
+	        function changeUni(){
+	            //清空上次的选项
+	            university.options.length=0;
+	            //获取省一级的下拉列表选中的索引
+	            var index = province.selectedIndex;
+	            for(var i=0;i<arr_uni[index].length;i++){
+	                university.options[i] = arr_uni[index][i];
+	            }
+	        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	.h1{
+		width:200px;
+		height:150px;
+		position:relative;
+		top:100px;
+		left:10%;
+	}
+	img.h2{
+		width:180px;
+		height:140px;
+		position:absolute;
+		transition:transform 2s,width 2s,height 2s; 
+	}
+	img.h3{
+		width:180px;
+		height:140px;
+		position:absolute;
+	}
+	img.h2:hover{
+		transform:rotateY(180deg); width:250px; height:160px;
+		-webkit-transform:rotateY(180deg) ;width:250px ;height:160px;
+		-moz-transform:rotateY(180deg) ;width:250px; height:160px;
+	}
+	</style>
+</head>
+<body>
+	<div class="h1">
+		<img class="h2" src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/56.jpg">
+		<!--<img class="h3" src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/57.jpg">-->
+	</div>
+</body>
+</html>

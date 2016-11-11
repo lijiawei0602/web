@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>百度一下，你就知道</title>
+	<meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
+	<style type="text/css">
+		ul {
+			list-style-type:none;
+			float:right;
+			margin:0;
+			padding:0;
+		}
+		ul li {
+			display:inline;
+		}
+		ul li a{
+			font-weight:bold;
+			font-size:15px;
+			color:black;
+			text-align:center;
+			padding:8px;
+			line-height: 15px;
+		}
+		ul li a:hover{
+			color:blue;
+		}
+		ul li ul{
+			display:none;
+			position:absolute;
+		}
+		ul li ul li{
+			float:none;
+		}
+		ul li ul li a{
+			border-left: none;
+			border-right: none;
+			display:block;
+			text-align: center;
+			text-decoration: none;
+		}
+		ul li ul li a:hover{
+		background-color: rgb(51,136,255);
+		color:white;
+		}
+		ul li:hover ul{
+			display:block;
+			position:absolute;
+			top:30px;
+			left:1280px;
+		}
+		img{
+			position:absolute;
+			top:15.1%;
+			right:41.6%;
+			bottom:32%;
+			left:41.6%;
+			width:16.8%;
+			height:15.5%;
+		}
+		form{
+			position:absolute;
+			top:32%;
+			right:26%;
+			left:26%;
+			width:48%;
+			height:4.5%;
+		}
+		.left{
+			width:84.3%;
+			height:100%;
+		}
+		.right{
+			position:absolute;
+			top:-5%;
+			right:0%;
+			left:84.5%;
+			width:15.6%;
+			height:127%;
+			background-color:rgb(51,133,255);
+			color:white;
+		}
+
+	</style>
+	</head>
+<body>
+	<ul>
+		<li><a href="#">糯米</a></li>
+		<li><a href="#">新闻</a></li>
+		<li><a href="#">hao123</a></li>
+		<li><a href="#">地图</a></li>
+		<li><a href="#">视频</a></li>
+		<li><a href="#">贴吧</a></li>
+		<li><a href="#" style="font-weight:normal">登录</a></li>
+		<li>
+			<a href="#" style="font-weight:normal">设置</a>
+			<ul>
+				<li><a href="#">搜索设置</a></li>
+				<li><a href="#">高级搜索</a></li>
+				<li><a href="#">关闭预测</a></li>
+				<li><a href="#">搜索历史</a></li>
+			</ul>
+		</li>
+	</ul>
+	<img src="http://localhost/新建文件夹/图片/1.jpg" />
+	<form action="http://baidu.com.cn/" method="get">
+		<input type="text" class="left" />
+		<input type="submit" class="right" value="百度一下" />
+	</form>
+</body>
+</html>

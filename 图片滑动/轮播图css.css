@@ -1,0 +1,67 @@
+#container{
+	position:relative;
+	top:200px;
+	left:30%;
+	width:500px;
+	height:300px;
+	border:solid 1px black;
+	overflow:hidden;
+}
+#pic{
+	position:absolute;
+	z-index:1;
+	width:4000px;
+	height:300px;
+}
+#pic img{
+	float:left;
+	width:500px;
+	height:300px;
+}
+#button{
+	position:absolute;
+	bottom:20px;
+	left:40%;
+	width:150px;
+	height:10px;
+	z-index:2;
+}
+#button .on{
+	background:orangered;
+}
+#button span{
+	cursor:pointer;
+	border:solid 1px white;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background: #333; 
+	margin-right:5px;
+	float:left;
+}
+.arrow{
+	display:none;
+	position:absolute;
+	top:150px;
+	z-index:2;
+	text-align: center;
+	text-decoration:none;
+	width:40px;
+	height:40px;
+	font-size: 35px;
+	font-weight:bolder;
+	color:white;
+	background:rgba(0,0,0,.3);
+}
+.arrow:hover{
+	background:rgba(0,0,0,.7);
+}
+#container:hover .arrow{
+	display:block;
+}
+#prev{
+	left:20px;
+}
+#next{
+	right:20px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<script type="text/javascript">
+		window.onload = function(){
+			var ul = document.getElementById("ul");
+			var li = ul.getElementsByTagName("li");
+
+			var arr = ["2","yellow","blue"];
+
+			function a(){
+				for(var i =0; i<3;i++){
+					var text = Math.floor(Math.random() * 3 + 1);
+					var text2 = document.createTextNode(text);
+					li[i].appendChild(text2);
+
+				}
+				
+				for(var i =0 ; i<3 ; i++){					
+					if(li[i].firstChild.nodeValue == 1){
+						li[i].style.background = "red";
+					}
+					if(li[i].firstChild.nodeValue == 2){
+						li[i].style.background = "yellow";
+					}
+					if(li[i].firstChild.nodeValue == 3){
+						li[i].style.background = "blue";
+					}
+				}
+			}
+			a();
+		}
+	</script>
+	<style type="text/css">
+		
+		li{
+			list-style-type: none;
+			width:50px;
+			height:25px;
+			border:solid 1px #000;
+			margin:10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul id="ul">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div>
+		<div class="l1"></div>
+		<div class="l2"></div>
+	</div>
+</body>
+</html>

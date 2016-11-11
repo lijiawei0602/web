@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片点击正反面切换</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	body{
+		width: 100%;
+		height: 1000px;
+	}
+	.photo{
+		-webkit-perspective:800px;
+		height: 340px;
+     	width: 20%;
+     	position: absolute;
+     	top: 20%;
+     	left: 20%;
+	}
+	.photo .side{
+			width: 100%;
+			height: 340px;
+			position: absolute;
+		}
+	.front{
+	}
+	.photo .front img{
+		width: 100%;
+        height:100%;
+	}
+	.photo .back img{
+		width: 100%;
+        height:100%;
+	}
+     .photo-doRotate{
+        width: 100%;
+		height: 100%;
+		position: absolute;
+		transition:all 1.5s;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+     }
+     .photo-doRotate .front{
+     	-moz-transform:rotateY(0deg);
+		-webkit-transform:rotateY(0deg);
+		-o-transform:rotateY(0deg);
+		-ms-transform:rotateY(0deg);
+     }
+     .photo-doRotate .back{
+     	-moz-transform:rotateY(180deg);
+		-webkit-transform:rotateY(180deg);
+		-o-transform:rotateY(180deg);
+		-ms-transform:rotateY(180deg);
+     }
+     .photo-doRotate .side{
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+	}
+     .front .photo-doRotate{
+     	-moz-transform:rotateY(0deg);
+		-webkit-transform:rotateY(0deg);
+     }
+     .back .photo-doRotate{
+		-moz-transform:rotateY(180deg);
+		-webkit-transform:rotateY(180deg);		
+	}
+	</style>
+</head>
+<body>
+    <div class="photo front">
+	    <div class="photo-doRotate" onclick="clickRotate3d()">
+	    	<div class="side front">
+	    		<img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/33.jpg">
+	    	</div>
+	    	<div class="side back"><img src="http://localhost/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E5%9B%BE%E7%89%87/34.jpg">
+	    	</div>
+	    </div>
+    </div>
+</body>
+<script type="text/javascript">
+function  clickRotate3d() {
+	var newClassName;
+	var centerPhoto = document.getElementsByClassName('photo')[0];
+	if(centerPhoto.className.search(/back/) != -1){
+		newClassName = centerPhoto.className.replace(/back/,"front");
+		centerPhoto.setAttribute('class',newClassName); 
+	}
+	else{
+		newClassName = centerPhoto.className.replace(/front/,"back");
+		centerPhoto.setAttribute('class',newClassName);
+	}
+}
+</script>
+</html>

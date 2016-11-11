@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<script type="text/javascript">
+		window.onload = function(){
+			function load(){
+
+				var len = arguments.length;
+				if(len == 1){
+					var value = arguments[0];
+					load1(value);
+				}
+				else{
+					var value1 = arguments[0];
+					var value2 = arguments[1];
+					load2(value1,value2);
+				}
+			}
+
+			function load1(value){
+				return (value + 10);
+			}
+
+			function load2(value1 , value2){
+				return (value1 + value2);
+			}
+			// console.log(load(10));
+			console.log(load(1,2));
+		}
+	</script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

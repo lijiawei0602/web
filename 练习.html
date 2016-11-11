@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件对象</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function(){
+			var btn = document.getElementById("btn");
+			var handler = function(event){
+				switch(event.type){
+					case "click":
+						alert("Click");
+						break;
+					case "mouseover":
+						event.target.style.backgroundColor = "red";
+						break;
+					case "mouseout":
+						event.target.style.backgroundColor = "";
+						break;
+				}
+			};
+			btn.addEventListener("click",handler,false);
+			// btn.onclick = handler;
+			// document.body.onclick = handler;
+			btn.onmouseover = handler;
+			btn.onmouseout = handler;
+		}
+	</script>
+</head>
+<body>
+	<input type="button" id="btn"/>
+</body>
+</html>

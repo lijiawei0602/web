@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<style type="text/css">
+		*{ 
+			margin:0; 
+			padding:0;
+		}
+
+		.nav { 
+			border:2px solid #ccc; 
+			border-right:none; 
+			overflow:hidden; 
+			float:left; 
+			margin:100px 0 0 300px;
+		}
+		.nav ul{
+			list-style-type: none;
+		}
+		.nav ul li {
+		 	float:left;
+		}
+
+		.nav ul li a { 
+			text-decoration: none;
+			text-align: center;
+			display:block;
+			width:120px; 
+			height:40px; 
+			line-height:40px;
+			border-right:2px solid #ccc; 
+			background:#eee;
+			color:#666;
+			}
+
+		.nav ul li a:hover{ 
+			color:red; 
+			}
+
+		.nav ul li ul { 
+			position:absolute;
+			display: none;
+		}
+
+		.nav ul li ul li {
+			float:none;
+			}
+
+		.nav ul li ul li a { 
+			border-right:none;
+		 	border-top:1px dotted #ccc;
+		 	background:#f5f5f5;
+		 }
+
+		.nav ul li:hover ul{
+			display:block; 
+		}
+
+	</style>
+</head>
+<body>
+	<div class="nav">
+  		<ul>
+    		<li><a href="#">栏目一</a>
+     			 <ul>
+        			<li><a href="#">二级栏目</a></li>
+        			<li><a href="#">二级栏目</a></li>
+        			<li><a href="#">二级栏目</a></li>
+        			<li><a href="#">二级栏目</a></li>
+      			</ul>
+   		 	</li>
+    		<li><a href="#">栏目二</a></li>
+    		<li><a href="#">栏目四</a></li>
+    		<li><a href="#">栏目五</a></li>
+  		</ul>
+	</div>
+</body>
+
+</html>

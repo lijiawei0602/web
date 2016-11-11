@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function createFunction(){
+		var result = new Array();
+
+		for(var i = 0; i<10; i++){
+			result[i] = function(n){
+				return n;
+			}(i);
+			// result[i] = function(num){
+			// 	return function(){
+			// 		return num;
+			// 	};
+			// }(i);
+		}
+
+		return result;
+	}
+	var a = createFunction();
+	console.log(a[9]);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

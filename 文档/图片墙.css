@@ -1,0 +1,206 @@
+html{
+	background:linear-gradient(#ff0 0%,#000 80%);
+    height: 100%;
+}
+.main{
+	width:88%;
+	height:400px;
+	position:relative;
+	top:50px;
+	left:6%;
+	border:solid;
+}
+.box1{
+	width:15%;
+	height:200px;
+	position:relative;
+	top:;
+	left:;
+/*	box-shadow:10px 10px 10px rgb(201,201,201);*/
+	transform:rotate(20deg);
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	float:left;
+}
+.box1:hover{
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	transform:scale(1.5,1.5) ;
+	-webkit-transform:scale(1.5,1.5);
+	-moz-transform:scale(1.5,1.5);
+	z-index:999;
+}
+.box2{
+	width:15%;
+	height:200px;
+/*	box-shadow:10px 10px 10px rgb(201,201,201);*/
+	transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	float:left;
+}
+.box2:hover{
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	transform:scale(1.5,1.5) ;
+	-webkit-transform:scale(1.5,1.5);
+	-moz-transform:scale(1.5,1.5);
+	z-index:999;
+}
+.box3{
+	width:15%;
+	height:200px;
+/*	box-shadow:10px 10px 10px rgb(201,201,201);*/
+	transform:rotate(-20deg);
+	-webkit-transform:rotate(-20deg);
+	-moz-transform:rotate(-20deg);
+ 	float:left;
+}
+.box3:hover{
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	transform:scale(1.5,1.5) ;
+	-webkit-transform:scale(1.5,1.5);
+	-moz-transform:scale(1.5,1.5);
+	z-index:999;
+}
+.box4{
+	width:15%;
+	height:200px;
+/*	box-shadow:10px 10px 10px rgb(201,201,201);*/
+	transform:rotate(40deg);
+	-webkit-transform:rotate(40deg);
+	-moz-transform:rotate(40deg);
+ 	float:left;
+}
+.box4:hover{
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	transform:scale(1.5,1.5) ;
+	-webkit-transform:scale(1.5,1.5);
+	-moz-transform:scale(1.5,1.5);
+	z-index:999;
+}
+
+.box5{
+	width:15%;
+	height:200px;
+/*	box-shadow:10px 10px 10px rgb(201,201,201);*/
+	transform:rotate(-40deg);
+	-webkit-transform:rotate(-40deg);
+	-moz-transform:rotate(-40deg);
+ 	float:left;
+}
+.box5:hover{
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	transform:scale(1.5,1.5) ;
+	-webkit-transform:scale(1.5,1.5);
+	-moz-transform:scale(1.5,1.5);
+	z-index:999;
+}
+.box6{
+	width:15%;
+	height:200px;
+/*	box-shadow:10px 10px 10px rgb(201,201,201);*/
+	transform:rotate(10deg);
+	-webkit-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+ 	float:left;
+}
+.box6:hover{
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	transform:scale(1.5,1.5) ;
+	-webkit-transform:scale(1.5,1.5);
+	-moz-transform:scale(1.5,1.5);
+	z-index:999;
+}
+.box7{
+	width:15%;
+	height:200px;
+/*	box-shadow:10px 10px 10px rgb(201,201,201);*/
+	transform:rotate(-10deg);
+	-webkit-transform:rotate(-10deg);
+	-moz-transform:rotate(-10deg);
+ 	float:left;
+ 	position:relative;
+ 	left:35%;
+}
+.box7:hover{
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	transform:scale(1.5,1.5) ;
+	-webkit-transform:scale(1.5,1.5);
+	-moz-transform:scale(1.5,1.5);
+	z-index:999;
+}
+.photo{
+	width:90%;
+	height:180px;
+	position:absolute;
+	top:;
+	left:;
+}
+.photo .side{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:10px;
+	left:10px;
+}
+.front{
+
+}
+.photo .front img{
+	width:100%;
+	height:100%;
+	position:relative;
+	border: solid white 15px;
+}
+
+.photo .back{
+	background-color: rgb(253,197,60);
+	width:100%;
+	height:100%;
+	border: solid white 20px;
+}
+  	 .photo-doRotate{
+        width: 100%;
+		height: 100%;
+		position: absolute;
+		transition:all 1.5s;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+     }
+     .photo-doRotate .front{
+     	-moz-transform:rotateY(0deg);
+		-webkit-transform:rotateY(0deg);
+		-o-transform:rotateY(0deg);
+		-ms-transform:rotateY(0deg);
+     }
+     .photo-doRotate .back{
+     	-moz-transform:rotateY(180deg);
+		-webkit-transform:rotateY(180deg);
+		-o-transform:rotateY(180deg);
+		-ms-transform:rotateY(180deg);
+     }
+     .photo-doRotate .side{
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+	}
+     .front .photo-doRotate{
+     	-moz-transform:rotateY(0deg);
+		-webkit-transform:rotateY(0deg);
+     }
+     .back .photo-doRotate{
+		-moz-transform:rotateY(180deg);
+		-webkit-transform:rotateY(180deg);		
+	}
