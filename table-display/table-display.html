@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格</title>
+	<meta http-equiv="Content-Type" content="text/html;charset:utf-8">
+	<link rel="stylesheet" type="text/css" href="table-display.css">
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="table-display.js"></script>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>选项</th>
+			<th>编号</th>
+			<th>封面</th>
+			<th>购书人</th>
+			<th>性别</th>
+			<th>购书价</th>
+		</tr>
+		<tr class="0">
+			<td><input type="checkbox" value="0"></td>
+			<td>1001</td>
+			<td><img src="img/24.jpg"></td>
+			<td>李小明</td>
+			<td>男</td>
+			<td>35.60元</td>
+		</tr>
+		<tr class="1">
+			<td><input type="checkbox" value="1"></td>
+			<td>1002</td>
+			<td><img src="img/25.jpg"></td>
+			<td>刘明明</td>
+			<td>女</td>
+			<td>37.80元</td>
+		</tr>
+		<tr class="2">
+			<td><input type="checkbox" value="2"></td>
+			<td>1003</td>
+			<td><img src="img/26.jpg"></td>
+			<td>张小星</td>
+			<td>女</td>
+			<td>45.60元</td>
+		</tr>
+	</table>
+	<table>
+		<tr class="3">
+			<td style="text-align:left">
+				<input type="checkbox" class="checkAll">全选
+				<input type="button" class="btn" value="删除">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

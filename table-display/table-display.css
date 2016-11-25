@@ -1,0 +1,17 @@
+*{
+	padding:0;
+	margin:0;
+}
+table{
+	width:500px;
+	border-collapse:collapse;
+}
+table tr th,td{
+	border:solid 1px #666;
+	text-align: center;
+}
+.btn{
+	border:solid 1px #666;
+	/*padding:2px;*/
+	width: 50px;
+}

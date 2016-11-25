@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		function init(select){
+			return $(select).html("<option>请选择</option>");
+		}
+
+		var data = {
+			厂商1: {品牌1_1:"型号1_1_1,型号1_1_2",
+					品牌1_2:"型号1_2_1,型号1_2_2"},
+			厂商2: {品牌2_1:"型号2_1_1,型号2_1_2",
+					品牌2_2:"型号2_2_1,型号2_2_2"},
+			厂商3: {品牌3_1:"型号3_1_1,型号3_1_2",
+					品牌3_2:"型号3_2_1,型号3_2_2"}
+		}
+		//添加厂商项
+		$.each(data , function(pa){
+			$(".oa").append("<option>"+ pa +"</option>");
+		});
+		$(".oa").change(function(){
+			init(".ob");
+			init(".oc");
+			
+			$.each(data , function(pa,px){
+				if($(".oa option:selected").text() == pa){
+					//遍历添加品牌项
+					$.each(px,function(pb,pc){
+						$(".ob").append("<option>"+ pb +"</option>");
+					});
+					//遍历添加型号项
+					$(".ob").change(function(){
+						init(".oc");
+						$.each(px,function(pb,pc){
+							if($(".ob option:selected").text() == pb){
+								$.each(pc.split(","),function(){
+									$(".oc").append("<option>"+ this +"</option>");
+								});
+							}
+						});
+					});
+				}
+			});
+		});
+	})
+	</script>
+</head>
+<body>
+	<div>
+		厂商: <select class="oa"><option>请选择</option></select>
+		品牌：<select class="ob"><option>请选择</option></select>
+		型号：<select class="oc"><option>请选择</option></select>
+	</div>
+</body>
+</html>
